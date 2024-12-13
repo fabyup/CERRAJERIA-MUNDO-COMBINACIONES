@@ -1,0 +1,40 @@
+CREATE DATABASE cerrajeria;
+
+USE cerrajeria;
+
+CREATE TABLE mensajes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(255) NOT NULL,
+  telefono VARCHAR(255) NOT NULL,
+  mensaje TEXT NOT NULL
+ 
+);
+
+ALTER TABLE mensajes DROP COLUMN fecha;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
