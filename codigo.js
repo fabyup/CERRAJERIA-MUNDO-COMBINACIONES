@@ -37,32 +37,40 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   // Selecciona el contenedor donde estarán las tarjetas del carrusel
+
   const carouselCards = document.getElementById("carousel-cards");
 
   // Llena el carrusel con tarjetas de servicios
+
   servicios.forEach(servicio => {
     // Crea una tarjeta HTML usando el método 'crearTarjeta' de la clase Servicio
+
     const card = ServicioDOM.crearTarjeta(servicio);
 
     // Agrega una clase CSS para darle estilo a la tarjeta
+
     card.classList.add("carousel-card");
 
     // Añade la tarjeta al carrusel
+
     carouselCards.appendChild(card);
   });
   // Manejo del formulario de contacto
+
   document
     .getElementById("form-contacto")
     .addEventListener("submit", async event => {
       event.preventDefault();
 
       // Obtener los valores del formulario
+
       const nombre = document.getElementById("nombre").value;
       const telefono = document.getElementById("telefono").value;
       const mensaje = document.getElementById("mensaje").value;
 
       try {
         // Enviar los datos al servidor con fetch
+
         const response = await fetch("http://localhost:3000/api/contacto", {
           method: "POST",
           headers: {
@@ -92,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let indiceActual = 0;
 
   // Función para actualizar la posición del carrusel
+
   function actualizarCarrusel() {
     const anchoTarjeta = document.querySelector(".carousel-card").offsetWidth;
     carouselCards.style.transform = `translateX(-${indiceActual *
@@ -99,6 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Función para mostrar la tarjeta anterior
+
   window.slideAnterior = function() {
     if (indiceActual > 0) {
       indiceActual--;
@@ -107,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Función para mostrar la tarjeta siguiente
+
   window.slideSiguiente = function() {
     if (indiceActual < servicios.length - 1) {
       indiceActual++;
@@ -115,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Evento para ajustar el carrusel en caso de cambio de tamaño de la ventana
+
   window.addEventListener("resize", actualizarCarrusel);
 
   /**
