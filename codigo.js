@@ -52,11 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
     card.classList.add("carousel-card");
 
     // Añade la tarjeta al carrusel
-
     carouselCards.appendChild(card);
   });
-  // Manejo del formulario de contacto
 
+  // Manejo del formulario de contacto
   document
     .getElementById("form-contacto")
     .addEventListener("submit", async event => {
@@ -209,6 +208,15 @@ document.addEventListener("DOMContentLoaded", () => {
   window.deleteMessage = function(index) {
     let formEntries = JSON.parse(localStorage.getItem("formEntries")) || [];
 
+    // Añade la nueva entrada al array de entradas
+    formEntries.push(formData);
+
+    //Guarda el array actualizado en LocalStorage
+    localStorage.setItem("formEntries", JSON.stringify(formEntries));
+    // Muestra una alerta de confirmación al usuario
+    alert(
+      `¡Gracias, ${nombre}! Nos pondremos en contacto al ${telefono} pronto.`
+    );
     // Limpia los campos del formulario
     document.getElementById("form-contacto").reset();
 
