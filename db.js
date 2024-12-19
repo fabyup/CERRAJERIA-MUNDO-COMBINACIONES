@@ -11,7 +11,6 @@ dotenv.config();  // Cargar las variables de entorno desde el archivo .env
   password: process.env.DB_PASSWORD, // La contraseña configurada en tu MySQL
   database: process.env.DB_NAME      // Debe ser 'cerrajeria', como la base de datos que creamos
 });
-// Conectar a la base de datos
 
 // Verificar conexión con la base de datos
 try {

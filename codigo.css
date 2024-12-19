@@ -7,19 +7,24 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #000;
+    /* Azul muy oscuro */
     color: white;
 }
 
 header {
     background-color: #003366;
+    /* Azul fuerte */
     color: white;
     text-align: center;
+    padding: 20px 0;
 }
 
 .urgencia {
-    color: #fd0000;
-    font-size: 2rem;
+    color: #ff3b30;
+    /* Rojo para urgencias */
+    font-size: 3rem;
     margin-bottom: 5px;
+    font-weight: 2px;
 }
 
 nav ul {
@@ -33,22 +38,44 @@ nav a {
     color: white;
     text-decoration: none;
     font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+    /* Azul brillante al pasar el mouse */
 }
 
 .nombreCerrajeria {
-    color: cornflowerblue;
+    color: #5c80b3;
+    /* Azul más suave para el nombre */
 }
 
+.imagen-reducida {
+    width: 100%;
+    /* Hace que la imagen ocupe el 100% del ancho del contenedor */
+    max-width: 200px;
+    /* Limita el tamaño máximo de la imagen */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+}
+
+
 .nuestros {
-    color: #f103f1;
-    justify-content: center;
+    color: #00aaff;
+    /* Azul brillante */
     font-size: 2rem;
+    justify-content: center;
 }
 
 section {
-    background-color: #525252;
-    color: #5aa572;
+    background-color: #000;
+    /* Azul oscuro para secciones */
+    color: #a7d8f4;
+    /* Azul suave para el texto */
     text-align: center;
+
+
 }
 
 .tarjetas-container {
@@ -60,17 +87,21 @@ section {
 }
 
 .tarjeta {
-    background-color: #808080;
+    background-color: #27496d;
+    /* Azul más oscuro */
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     flex: 1 1 210px;
     max-width: 230px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+
 
 .imagen-cerrajero {
     width: 40%;
@@ -78,14 +109,9 @@ section {
     height: auto;
 }
 
-.imagen-reducida {
-    width: 200px;
-}
-
-
-
 h2 {
-    color: #92bdf1;
+    color: #00aaff;
+    /* Azul brillante para títulos */
     text-align: center;
     margin-top: 8px;
 }
@@ -96,26 +122,31 @@ h2 {
 }
 
 .numero-de-contacto {
-    color: #fd0000;
+    color: #ff3b30;
+    /* Rojo brillante para números */
     font-size: 30px;
-    font-weight: 30px;
+    font-weight: 600;
 }
 
 .correo-electronico {
-    color: #fd0000;
+    color: #00aaff;
+    /* Azul brillante */
 }
 
 p {
-    color: #000;
-
+    color: #c0c0c0;
+    /* Gris claro para párrafos */
     text-align: center;
     font-size: 1.2rem;
     margin: 5px 0 16px;
 }
 
 #contacto {
+    margin: 5% 25%;
     padding: 20px;
     border-radius: 8px;
+    background-color: #1a2a4a;
+    /* Azul oscuro */
 }
 
 #form-contacto {
@@ -125,9 +156,11 @@ p {
 }
 
 #form-contacto label {
-    display: block;
+
     margin-bottom: 8px;
     font-weight: bold;
+    color: #b0c4de;
+    /* Azul claro */
 }
 
 #form-contacto input,
@@ -137,25 +170,31 @@ p {
     margin-bottom: 15px;
     border-radius: 4px;
     border: 1px solid #ccc;
+    background-color: #0a1d37;
+    /* Azul oscuro */
+    color: white;
 }
 
 #form-contacto button {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
+    /* Azul brillante */
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 #form-contacto button:hover {
     background-color: #0056b3;
+    /* Azul más oscuro al pasar el mouse */
 }
 
 #display-area {
     margin-top: 20px;
     padding: 10px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -175,14 +214,22 @@ p {
 }
 
 footer {
-    max-width: 100%;
-    color: #3a92e9;
+    width: 100%;
+    color: #ffffff;
     background-color: #003366;
+    /* Azul fuerte */
     text-align: center;
-    padding: 10px 0;
     font-size: 1rem;
+    padding: 20px 0;
+    /* Espaciado dentro del footer */
+    position: relative;
+    /* Se asegura de que se mantenga en el flujo normal */
+    bottom: 0;
+    margin-top: auto;
+    /* Empuja el footer hacia el final del contenido */
 }
 
+/* Responsividad */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -190,23 +237,15 @@ footer {
     }
 
     .tarjeta {
-        color: #808080;
         flex: 1 1 100%;
         width: 100%;
     }
 
     h2 {
-        color: #000;
-        font-size: 3rem;
-    }
-
-    h3 {
-        color: #000;
+        font-size: 2rem;
     }
 
     p {
-        color: #000;
-
         font-size: 1rem;
     }
 }
@@ -222,17 +261,10 @@ footer {
     }
 
     h2 {
-        color: #000;
-        font-size: 1rem;
-    }
-
-    h3 {
-        color: #000;
+        font-size: 1.2rem;
     }
 
     p {
-        color: #000;
-
         font-size: 1rem;
     }
 }
@@ -252,24 +284,14 @@ footer {
 }
 
 .carousel-cards {
-    color: black;
-    background-color: #c0c0c0;
     display: flex;
     transition: transform 0.5s ease;
-    -webkit-transition: transform 0.5s ease;
-    -moz-transition: transform 0.5s ease;
-    -o-transition: transform 0.5s ease;
 }
 
 .carousel-card {
-
     min-width: 100%;
     box-sizing: border-box;
-
-
 }
-
-
 
 .carousel-btn {
     position: absolute;
