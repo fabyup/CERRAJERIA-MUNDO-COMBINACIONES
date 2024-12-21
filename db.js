@@ -20,7 +20,8 @@ try {
   console.error('Error al conectar a la base de datos:', error.message);
 }
 
-export { connection };  // Exporta la conexión para usarla en otras partes de tu código
+// Exporta la conexión para usarla en otras partes de tu código
+export { connection };  
 
 
 
