@@ -1,20 +1,17 @@
-import express from "express";
+import dotenv from "dotenv"; // Si usas módulos ES
 
-import cors from "cors";
-import contactoRoutes from "./contactoRoutes.js";
+import express from "express";
+import contactoRoutes from "./contactoRoutes.js"; // Asegúrate de que la extensión .js esté incluida
 
 const app = express();
+dotenv.config();
+app.use(express.json()); // Middleware para parsear el body de las solicitudes
 
-// Middleware para permitir CORS
-app.use(cors());
-// Middleware para parsear cuerpos JSON
-app.use(express.json());
+// Rutas bajo el prefijo /api
+app.use("/api", contactoRoutes);
 
-// Rutas
-app.use("/api", contactoRoutes); // Aquí estamos usando la ruta correcta
-
-// Puerto
-const PORT = process.env.PORT || 3000;
+// Arrancar el servidor
+const PORT = 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en el puerto ${PORT}`);
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

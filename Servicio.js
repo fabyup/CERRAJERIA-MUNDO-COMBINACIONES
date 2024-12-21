@@ -1,5 +1,5 @@
 
-import { ServicioDOM } from "../ServicioDOM.js";
+import { ServicioDOM } from "./ServicioDOM.js";
 
 export class Servicio {
   #nombre;

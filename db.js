@@ -1,8 +1,8 @@
 import mysql from 'mysql2/promise';
-import dotenv from 'dotenv';
+import dotenv from "dotenv"; // Si usas módulos ES
  // Asumiendo que exportas la conexión desde db.js
 
-dotenv.config();  // Cargar las variables de entorno desde el archivo .env
+  dotenv.config();  // Cargar las variables de entorno desde el archivo .env
 
 // Crear la conexión a la base de datos
   const connection = await mysql.createConnection({
