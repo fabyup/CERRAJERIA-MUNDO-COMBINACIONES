@@ -10,10 +10,10 @@ CREATE TABLE mensajes (
  
 );
 
-ALTER TABLE mensajes DROP COLUMN fecha;
+A
+LTER TABLE mensajes DROP COLUMN fecha;
 
-
-
+insert into mensajes(nombre,telefono.mensaje) value("olga","1122335544","hola ")
 
 
 

@@ -6,7 +6,7 @@ import dotenv from "dotenv"; // Si usas módulos ES
 
 // Crear la conexión a la base de datos
   const connection = await mysql.createConnection({
-  host: process.env.DB_HOST,         // Debe ser 'localhost' si estás trabajando en local
+  host: process.env.DB_HOST,          // Debe ser 'localhost' si estás trabajando en local
   user: process.env.DB_USER,         // Debe ser 'root' o tu usuario de MySQL
   password: process.env.DB_PASSWORD, // La contraseña configurada en tu MySQL
   database: process.env.DB_NAME      // Debe ser 'cerrajeria', como la base de datos que creamos
