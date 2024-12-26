@@ -5,7 +5,7 @@ import { connection } from "./db.js"; // Asegúrate de tener correctamente la co
 const router = express.Router();
 
 // Ruta para obtener todos los mensajes
-router.get("/mensajes", async (req, res) => {
+router.get("/mensajes", async (_req, res) => {
   try {
     console.log("Obteniendo todos los mensajes...");
 
