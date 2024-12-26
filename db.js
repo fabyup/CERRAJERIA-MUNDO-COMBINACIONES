@@ -1,4 +1,4 @@
-import mysql from 'mysql2/promise';
+import mysql from "mysql2/promise";
 import dotenv from "dotenv"; // Si usas módulos ES
  // Asumiendo que exportas la conexión desde db.js
 
