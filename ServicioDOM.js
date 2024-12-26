@@ -1,4 +1,5 @@
 // Clase para crear la tarjeta de servicio en el DOM
+
 export class ServicioDOM {
   static crearTarjeta(servicio) {
     const tarjeta = document.createElement("div");

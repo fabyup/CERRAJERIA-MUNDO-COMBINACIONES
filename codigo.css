@@ -20,7 +20,7 @@ header {
 }
 
 .urgencia {
-    color: #ff3b30;
+    color: #ff271c;
     /* Rojo para urgencias */
     font-size: 3rem;
     margin-bottom: 5px;
@@ -106,7 +106,7 @@ section {
 .imagen-cerrajero {
     width: 40%;
     max-width: 150px;
-    height: auto;
+    height: 100px;
 }
 
 h2 {
@@ -122,7 +122,7 @@ h2 {
 }
 
 .numero-de-contacto {
-    color: #ff3b30;
+    color: #ff271c;
     /* Rojo brillante para números */
     font-size: 30px;
     font-weight: 600;
