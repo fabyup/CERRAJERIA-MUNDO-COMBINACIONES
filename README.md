@@ -43,4 +43,5 @@ Mejoras
 Se implemento una base de datos para guardar contactos de manera más permanente.
 
 Mejorar el diseño responsivo para más dispositivos.
-Desarrollado con buenas prácticas de código y documentación detallada en cada sección de JavaScript. Se realizaron commits bien detallados y se evaluaron posibles problemas, retos y soluciones durante el desarrollo.
+Desarrollado con buenas prácticas de código y documentación detallada en cada sección de JavaScript. Se realizaron commits bien detallados y se evaluaron posibles problemas, retos y soluciones durante el desarrollo.# CERRAJERIA.COM
+# CERRAJERIA.COM
