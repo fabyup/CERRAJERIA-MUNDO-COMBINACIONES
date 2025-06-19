@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function mostrarMensajes() {
     const password = document.getElementById("password").value;
 
-    if (password === "hola") {
+    if (password === "") {
       document.getElementById("messages-display").style.display = "block";
       displayMessages();
     } else {
